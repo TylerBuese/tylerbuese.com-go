@@ -3,9 +3,20 @@ package main
 import (
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/tylerbuese/tylerbuese.com/routes"
 )
+
+type Status struct {
+	StartTime time.Time
+	Events    []Event
+}
+
+type Event struct {
+	EventDate time.Time
+	EventText string
+}
 
 func main() {
 	serv := &http.Server{

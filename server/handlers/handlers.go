@@ -5,6 +5,6 @@ import (
 	"net/http"
 )
 
-func Up(w http.ResponseWriter, r *http.Request) {
+func Status(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Up!")
 }

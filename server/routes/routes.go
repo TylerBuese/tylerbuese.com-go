@@ -9,6 +9,6 @@ import (
 
 func Routes() http.Handler {
 	mux := chi.NewRouter()
-	mux.Get("/up", handlers.Up)
+	mux.Get("/status", handlers.Status)
 	return mux
 }
